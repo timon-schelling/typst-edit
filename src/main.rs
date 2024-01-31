@@ -61,11 +61,11 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         create_dir_all(parent)?;
     }
 
-    let mut typst_compile = spawn_typst_compile(input, &output, &args)?;
+    let mut typst_compile = spawn_typst_compile(input, &output, &args).expect("Failed to spawn typst compile process");
     typst_compile.wait().await?;
 
-    let mut typst_live = spawn_typst_live(&output, address, port)?;
-    let mut typst_watch = spawn_typst_watch(input, &output, &args)?;
+    let mut typst_live = spawn_typst_live(&output, address, port).expect("Failed to spawn typst-live process");
+    let mut typst_watch = spawn_typst_watch(input, &output, &args).expect("Failed to spawn typst watch process");
 
     select! {
         _ = typst_live.wait() => {}
