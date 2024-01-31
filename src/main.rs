@@ -14,8 +14,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let matches = command!()
         .styles(
             Styles::styled()
-                .header(AnsiColor::Green.on_default() | Effects::BOLD)
-                .usage(AnsiColor::Green.on_default() | Effects::BOLD)
+                .header(AnsiColor::Green.on_default() | Effects::BOLD | Effects::UNDERLINE)
+                .usage(AnsiColor::Green.on_default() | Effects::BOLD | Effects::UNDERLINE)
                 .literal(AnsiColor::Cyan.on_default() | Effects::BOLD)
                 .placeholder(AnsiColor::Cyan.on_default()),
         )
