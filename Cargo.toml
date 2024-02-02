@@ -1,7 +1,13 @@
 [package]
-name = "typst-liveedit"
-version = "0.1.0"
+name = "typst-edit"
+version = "0.1.0-alpha.1"
 edition = "2021"
+description = "Edit typst files localy with live reloading pdf preview in the browser."
+authors = ["Timon Schelling"]
+repository = "https://github.com/timon-schelling/typst-edit"
+documentation = "https://docs.rs/typst-edit"
+license = "MIT"
+keywords = ["typst", "live-reload", "pdf", "edit"]
 
 [dependencies]
 tokio = { version = "1", features = ["full"] }
