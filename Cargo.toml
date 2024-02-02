@@ -7,7 +7,7 @@ authors = ["Timon Schelling"]
 repository = "https://github.com/timon-schelling/typst-edit"
 documentation = "https://docs.rs/typst-edit"
 license = "MIT"
-keywords = ["typst", "live-reload", "pdf", "edit"]
+keywords = ["typst", "edit", "live", "reload", "watch"]
 
 [dependencies]
 tokio = { version = "1", features = ["full"] }
