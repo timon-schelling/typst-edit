@@ -26,4 +26,4 @@ ENV PATH="/usr/local/bin:${PATH}"
 
 WORKDIR /workspace
 
-ENTRYPOINT [ "typst-edit", "--port", "1312", "./main.typ" ]
+ENTRYPOINT [ "typst-edit" ]
