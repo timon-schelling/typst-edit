@@ -8,7 +8,7 @@ RUN cd tmp && \
     mv ./typst*/typst /usr/local/bin/typst && \
     rm -r /tmp/*
 
-RUN cargo install --git https://github.com/ItsEthra/typst-live --rev 550a69bea07d3948bbe9e2dfe0c45447b8f1bc83
+RUN cargo install --git https://github.com/ItsEthra/typst-live
 RUN ls usr/local/bin && cp /usr/local/cargo/bin/typst-live /usr/local/bin/typst-live
 
 COPY . /src
