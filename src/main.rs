@@ -39,7 +39,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             Arg::new("args")
                 .trailing_var_arg(true)
                 .allow_hyphen_values(true)
-                .last(true)
                 .num_args(1..)
                 .help("Arguments to be passed on to typst"),
         )
