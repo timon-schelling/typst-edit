@@ -24,6 +24,6 @@ COPY --from=builder /usr/local/bin/typst-edit /usr/local/bin/typst-edit
 
 ENV PATH="/usr/local/bin:${PATH}"
 
-WORKDIR /workspace
+WORKDIR /src
 
 ENTRYPOINT [ "typst-edit" ]
