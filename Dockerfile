@@ -16,7 +16,9 @@ WORKDIR /src
 RUN cargo install --path .
 RUN cp /usr/local/cargo/bin/typst-edit /usr/local/bin/typst-edit
 
-FROM busybox
+FROM alpine
+
+RUN apk add --no-cache ca-certificates && update-ca-certificates
 
 COPY --from=builder /usr/local/bin/typst /usr/local/bin/typst
 COPY --from=builder /usr/local/bin/typst-live /usr/local/bin/typst-live
